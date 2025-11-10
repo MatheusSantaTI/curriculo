@@ -1,523 +1,175 @@
-<!DOCTYPE html>            box-shadow: 
+# 📄 Currículo Profissional Interativo
+
+Um currículo web moderno, responsivo e interativo criado com HTML, CSS e JavaScript puro.
+
+## ✨ Características
+
+- 🎨 **Design Moderno**: Gradientes vibrantes e layout limpo
+- 📱 **Responsivo**: Adapta-se perfeitamente a todos os dispositivos
+- 🎭 **Animações Suaves**: Transições e efeitos de entrada elegantes
+- 📋 **Copiar Contatos**: Clique nos dados de contato para copiar automaticamente
+- ⚡ **Performance**: Carregamento rápido, sem dependências externas
+- 🎯 **Interativo**: Efeitos hover e animações ao scroll
+
+## 🚀 Tecnologias Utilizadas
+
+- **HTML5**: Estrutura semântica
+- **CSS3**: Estilização avançada com:
+  - Flexbox para layouts
+  - Gradientes lineares
+  - Animações e transições
+  - Media queries para responsividade
+- **JavaScript**: Funcionalidades interativas
+  - Copiar para área de transferência
+  - Animações dinâmicas
+  - Efeito parallax
+
+## 📁 Estrutura do Projeto
+
+```
+curriculo/
+│
+├── index.html          # Arquivo principal (HTML + CSS + JS integrados)
+└── README.md          # Documentação do projeto
+```
+
+## 🎯 Como Usar
+
+### 1. Download
+Baixe ou clone este arquivo HTML.
+
+### 2. Personalização
+Abra o arquivo `index.html` em um editor de texto e personalize:
+
+#### Informações Pessoais
+```javascript
+// Localize estas linhas no HTML e substitua:
+<h1 id="nome">Seu Nome Completo</h1>
+<span id="telefone">(00) 00000-0000</span>
+<span id="email">seuemail@email.com</span>
+<span id="instagram">@seuinstagram</span>
+<span id="twitter">@seutwitter</span>
+```
 
-<html lang="pt-BR">                inset 0 0 20px rgba(0, 255, 136, 0.2),
+#### Sobre Mim
+Edite o texto na seção "Sobre Mim" com sua descrição profissional.
 
-<head>                0 0 20px rgba(0, 255, 136, 0.4);
+#### Habilidades
+Adicione ou remova tags de habilidades:
+```html
+<div class="skill-tag">Nome da Habilidade</div>
+```
 
-    <meta charset="UTF-8">        }
+#### Experiência Profissional
+Duplique e edite os blocos `.experience-item`:
+```html
+<div class="experience-item">
+    <div class="item-title">Cargo</div>
+    <div class="item-subtitle">Empresa</div>
+    <div class="item-date">Período</div>
+    <p class="item-description">Descrição do trabalho</p>
+</div>
+```
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#### Formação Acadêmica
+Edite os blocos `.education-item` com suas informações educacionais.
 
-    <meta name="description" content="Portfólio Profissional de Matheus Santana - Desenvolvedor Full Stack">        .submit-btn::before {
+### 3. Visualização
+Abra o arquivo `index.html` em qualquer navegador moderno.
 
-    <title>Matheus Santana | Desenvolvedor Full Stack</title>            content: '';
+## 🎨 Personalização de Cores
 
-    <!-- Fontes e ícones -->            position: absolute;
+Para mudar o esquema de cores, edite os gradientes no CSS:
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">            top: 0;
+```css
+/* Cores principais */
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">            left: -100%;
+/* Para mudar para outras cores, exemplo: */
+/* Azul para Verde */
+background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
 
-    <!-- Estilos -->            width: 100%;
+/* Rosa para Laranja */
+background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+```
 
-    <link rel="stylesheet" href="css/styles.css">            height: 100%;
+## 📱 Responsividade
 
-    <link rel="stylesheet" href="css/theme-dark.css" id="theme-style">            background: var(--primary);
+O currículo se adapta automaticamente a:
+- 💻 Desktop (> 768px)
+- 📱 Tablet (768px)
+- 📱 Mobile (< 768px)
 
-</head>            transition: left 0.5s;
+## ⚡ Funcionalidades JavaScript
 
-<body>            z-index: -1;
+### Copiar para Área de Transferência
+Clique em qualquer informação de contato para copiar automaticamente.
 
-    <!-- Header / Navegação -->        }
+```javascript
+function copyToClipboard(elementId) {
+    const text = document.getElementById(elementId).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Copiado: ' + text);
+    });
+}
+```
 
-    <header class="header">
+### Animações de Entrada
+Elementos aparecem suavemente ao carregar a página.
 
-        <nav class="nav container">        .submit-btn:hover::before {
+### Efeito Parallax
+Sutil movimento no header durante o scroll.
 
-            <a href="#" class="nav__logo">MS</a>            left: 0;
+## 🌐 Hospedagem
 
-            <div class="nav__menu" id="nav-menu">        }
+Você pode hospedar gratuitamente em:
+- [GitHub Pages](https://pages.github.com/)
+- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/)
+- [Surge](https://surge.sh/)
 
-                <ul class="nav__list">
+### GitHub Pages (exemplo):
+```bash
+# 1. Crie um repositório no GitHub
+# 2. Suba o arquivo index.html
+git add .
+git commit -m "Adiciona currículo"
+git push origin main
 
-                    <li class="nav__item"><a href="#home" class="nav__link active">Início</a></li>        .submit-btn:hover {
+# 3. Ative GitHub Pages nas configurações do repositório
+# 4. Acesse: https://seuusuario.github.io/nome-do-repositorio
+```
 
-                    <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>            color: var(--dark);
+## 📝 Licença
 
-                    <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>            box-shadow: 
+Este projeto é de código aberto e está disponível para uso pessoal e comercial.
 
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Projetos</a></li>                inset 0 0 30px rgba(0, 255, 136, 0.5),
+## 🤝 Contribuições
 
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>                0 0 40px rgba(0, 255, 136, 0.8);
+Sugestões e melhorias são bem-vindas!
 
-                </ul>        }
+## 📧 Contato
 
-                <div class="nav__close" id="nav-close">
+Personalize esta seção com suas informações de contato.
 
-                    <i class="fas fa-times"></i>        /* FOOTER */
+---
 
-                </div>        footer {
+**Desenvolvido com ❤️ usando HTML, CSS e JavaScript**
 
-                <div class="nav__theme-toggle">            background: var(--dark-secondary);
+## 🎓 Recursos Adicionais
 
-                    <i class="fas fa-moon" id="theme-button"></i>            padding: 2rem 1rem;
+- [MDN Web Docs - HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [MDN Web Docs - CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [MDN Web Docs - JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Gradient Generator](https://cssgradient.io/)
+- [Google Fonts](https://fonts.google.com/)
 
-                </div>            text-align: center;
+## 🔄 Changelog
 
-            </div>            color: #94a3b8;
-
-            <div class="nav__toggle" id="nav-toggle">            font-size: 0.9rem;
-
-                <i class="fas fa-bars"></i>            border-top: 2px solid var(--primary);
-
-            </div>            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-
-        </nav>        }
-
-    </header>
-
-        footer a {
-
-    <main class="main">            color: var(--primary);
-
-        <!-- Seção Inicial -->            text-decoration: none;
-
-        <section class="home section" id="home">            transition: 0.3s;
-
-            <div class="home__container container">        }
-
-                <div class="home__content">
-
-                    <div class="home__data">        footer a:hover {
-
-                        <h1 class="home__title">Olá, eu sou<br>Matheus Santana</h1>            color: var(--accent);
-
-                        <h3 class="home__subtitle">Desenvolvedor Full Stack</h3>            text-shadow: 0 0 10px var(--accent);
-
-                        <p class="home__description">        }
-
-                            Apaixonado por criar soluções inovadoras e experiências digitais incríveis.
-
-                        </p>        /* RESPONSIVIDADE */
-
-                        <div class="home__buttons">        @media (max-width: 900px) {
-
-                            <a href="#contact" class="button button--primary">Contato</a>            .hero-container, .sobre-content {
-
-                            <a href="#portfolio" class="button button--ghost">Portfólio</a>                grid-template-columns: 1fr;
-
-                        </div>                text-align: center;
-
-                    </div>            }
-
-                    <div class="home__img">
-
-                        <img src="assets/images/profile.jpg" alt="Matheus Santana" class="home__profile">            .hero-content h1 {
-
-                    </div>                font-size: 2.8rem;
-
-                </div>            }
-
-                <div class="home__scroll">
-
-                    <a href="#about" class="home__scroll-button">            .hero-content h2 {
-
-                        <i class="fas fa-mouse home__scroll-mouse"></i>                font-size: 1.2rem;
-
-                        <span class="home__scroll-name">Role para baixo</span>            }
-
-                        <i class="fas fa-arrow-down home__scroll-arrow"></i>
-
-                    </a>            .profile-pic {
-
-                </div>                width: 280px;
-
-            </div>                height: 280px;
-
-        </section>                margin: 0 auto;
-
-            }
-
-        <!-- Sobre -->
-
-        <section class="about section" id="about">            .nav-links {
-
-            <div class="about__container container">                display: none;
-
-                <h2 class="section__title">Sobre Mim</h2>                flex-direction: column;
-
-                <div class="about__content">                background: rgba(13, 2, 33, 0.95);
-
-                    <div class="about__data">                position: absolute;
-
-                        <p class="about__description">                top: 70px;
-
-                            Desenvolvedor Full Stack com experiência em criar aplicações web modernas e escaláveis.                 right: 0;
-
-                            Especializado em React, Node.js e tecnologias cloud.                width: 200px;
-
-                        </p>                border-left: 2px solid var(--primary);
-
-                        <div class="about__info">                padding: 1rem;
-
-                            <div class="about__box">            }
-
-                                <i class="fas fa-award about__icon"></i>
-
-                                <h3 class="about__title">Experiência</h3>            .menu-toggle {
-
-                                <span class="about__subtitle">2+ Anos</span>                display: flex;
-
-                            </div>            }
-
-                            <div class="about__box">
-
-                                <i class="fas fa-briefcase about__icon"></i>            .menu-toggle.active + .nav-links {
-
-                                <h3 class="about__title">Completados</h3>                display: flex;
-
-                                <span class="about__subtitle">20+ Projetos</span>            }
-
-                            </div>        }
-
-                            <div class="about__box">    </style>
-
-                                <i class="fas fa-headset about__icon"></i></head>
-
-                                <h3 class="about__title">Suporte</h3>
-
-                                <span class="about__subtitle">Online 24/7</span><body>
-
-                            </div>    <div class="grid-background"></div>
-
-                        </div>    <div class="particles"></div>
-
-                    </div>    <div class="scanlines"></div>
-
-                </div>
-
-            </div>    <!-- Navbar -->
-
-        </section>    <nav class="navbar">
-
-        <div class="nav-container">
-
-        <!-- Habilidades -->            <div class="logo">Matheus</div>
-
-        <section class="skills section" id="skills">            <div class="menu-toggle" id="menu-toggle">
-
-            <div class="skills__container container">                <span></span><span></span><span></span>
-
-                <h2 class="section__title">Minhas Habilidades</h2>            </div>
-
-                <div class="skills__content">            <ul class="nav-links" id="nav-links">
-
-                    <div class="skills__area">                <li><a href="#sobre">Sobre</a></li>
-
-                        <h3 class="skills__title">Frontend</h3>                <li><a href="#habilidades">Habilidades</a></li>
-
-                        <div class="skills__box">                <li><a href="#projetos">Projetos</a></li>
-
-                            <div class="skills__group">                <li><a href="#contato">Contato</a></li>
-
-                                <div class="skills__data">            </ul>
-
-                                    <i class="fab fa-html5"></i>        </div>
-
-                                    <div>    </nav>
-
-                                        <h3 class="skills__name">HTML</h3>
-
-                                        <span class="skills__level">Avançado</span>    <!-- HERO -->
-
-                                    </div>    <section class="hero">
-
-                                </div>        <div class="hero-container">
-
-                                <div class="skills__data">            <div class="hero-content">
-
-                                    <i class="fab fa-css3-alt"></i>                <h1>Matheus Santana</h1>
-
-                                    <div>                <h2 class="typing-effect">Desenvolvedor Full Stack</h2>
-
-                                        <h3 class="skills__name">CSS</h3>                <p>Crio experiências digitais modernas, responsivas e cheias de vida com tecnologias de ponta.</p>
-
-                                        <span class="skills__level">Avançado</span>                <div class="hero-buttons">
-
-                                    </div>                    <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-
-                                </div>                    <a href="#contato" class="btn btn-secondary">Contato</a>
-
-                                <div class="skills__data">                </div>
-
-                                    <i class="fab fa-js"></i>            </div>
-
-                                    <div>            <div class="hero-image">
-
-                                        <h3 class="skills__name">JavaScript</h3>                <div class="profile-pic">
-
-                                        <span class="skills__level">Intermediário</span>                    <div class="profile-pic-inner">
-
-                                    </div>                        <div class="hologram-effect"></div>
-
-                                </div>                        <i class="fa-solid fa-user-astronaut"></i>
-
-                            </div>                    </div>
-
-                            <div class="skills__group">                </div>
-
-                                <div class="skills__data">            </div>
-
-                                    <i class="fab fa-react"></i>        </div>
-
-                                    <div>    </section>
-
-                                        <h3 class="skills__name">React</h3>
-
-                                        <span class="skills__level">Intermediário</span>    <!-- OUTRAS SEÇÕES (SOBRE, HABILIDADES, PROJETOS...) -->
-
-                                    </div>    <!-- Você pode colar aqui o conteúdo das demais seções já criadas -->
-
-                                </div>
-
-                                <div class="skills__data">    <!-- CONTATO -->
-
-                                    <i class="fab fa-bootstrap"></i>    <section id="contato">
-
-                                    <div>        <div class="container contact-container">
-
-                                        <h3 class="skills__name">Bootstrap</h3>            <h2 class="section-title">Contato</h2>
-
-                                        <span class="skills__level">Intermediário</span>            <p class="section-subtitle">Entre em contato comigo para colaborações, projetos ou oportunidades.</p>
-
-                                    </div>
-
-                                </div>            <div class="contact-form">
-
-                                <div class="skills__data">                <form>
-
-                                    <i class="fab fa-sass"></i>                    <div class="form-group">
-
-                                    <div>                        <label for="nome">Nome</label>
-
-                                        <h3 class="skills__name">SASS</h3>                        <input type="text" id="nome" name="nome" required>
-
-                                        <span class="skills__level">Básico</span>                    </div>
-
-                                    </div>                    <div class="form-group">
-
-                                </div>                        <label for="email">E-mail</label>
-
-                            </div>                        <input type="email" id="email" name="email" required>
-
-                        </div>                    </div>
-
-                    </div>                    <div class="form-group">
-
-                        <label for="mensagem">Mensagem</label>
-
-                    <div class="skills__area">                        <textarea id="mensagem" name="mensagem" required></textarea>
-
-                        <h3 class="skills__title">Backend</h3>                    </div>
-
-                        <div class="skills__box">                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
-
-                            <div class="skills__group">                </form>
-
-                                <div class="skills__data">            </div>
-
-                                    <i class="fab fa-node-js"></i>        </div>
-
-                                    <div>    </section>
-
-                                        <h3 class="skills__name">Node.js</h3>
-
-                                        <span class="skills__level">Intermediário</span>    <!-- FOOTER -->
-
-                                    </div>    <footer>
-
-                                </div>        © 2025 Matheus Santana. Todos os direitos reservados.  
-
-                                <div class="skills__data">        Feito com 💚 e muito <a href="#hero">código</a>.
-
-                                    <i class="fas fa-database"></i>    </footer>
-
-                                    <div>
-
-                                        <h3 class="skills__name">MySQL</h3>    <script>
-
-                                        <span class="skills__level">Intermediário</span>        // Animação do menu responsivo
-
-                                    </div>        const toggle = document.getElementById('menu-toggle');
-
-                                </div>        const nav = document.getElementById('nav-links');
-
-                                <div class="skills__data">
-
-                                    <i class="fas fa-server"></i>        toggle.addEventListener('click', () => {
-
-                                    <div>            toggle.classList.toggle('active');
-
-                                        <h3 class="skills__name">MongoDB</h3>            nav.classList.toggle('active');
-
-                                        <span class="skills__level">Básico</span>        });
-
-                                    </div>
-
-                                </div>        // Partículas aleatórias
-
-                            </div>        const particlesContainer = document.querySelector('.particles');
-
-                        </div>        for (let i = 0; i < 40; i++) {
-
-                    </div>            const p = document.createElement('div');
-
-                </div>            p.classList.add('particle');
-
-            </div>            p.style.left = Math.random() * 100 + '%';
-
-        </section>            p.style.animationDelay = Math.random() * 10 + 's';
-
-            particlesContainer.appendChild(p);
-
-        <!-- Portfólio -->        }
-
-        <section class="portfolio section" id="portfolio">    </script>
-
-            <div class="portfolio__container container"></body>
-
-                <h2 class="section__title">Meu Portfólio</h2></html>
-
-                <div class="portfolio__content grid">
-                    <!-- Projeto 1 -->
-                    <article class="portfolio__card">
-                        <img src="assets/images/project1.jpg" alt="E-commerce" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">E-commerce</h3>
-                            <p class="portfolio__description">
-                                Plataforma completa de vendas online com sistema de pagamentos integrado.
-                            </p>
-                            <div class="portfolio__tags">
-                                <span class="portfolio__tag">React</span>
-                                <span class="portfolio__tag">Node.js</span>
-                                <span class="portfolio__tag">MongoDB</span>
-                            </div>
-                            <div class="portfolio__buttons">
-                                <a href="#" class="portfolio__button">
-                                    <i class="fas fa-globe"></i> Demo
-                                </a>
-                                <a href="#" class="portfolio__button">
-                                    <i class="fab fa-github"></i> Código
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 2 -->
-                    <article class="portfolio__card">
-                        <img src="assets/images/project2.jpg" alt="Dashboard" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Dashboard Analytics</h3>
-                            <p class="portfolio__description">
-                                Sistema de análise de dados com gráficos interativos.
-                            </p>
-                            <div class="portfolio__tags">
-                                <span class="portfolio__tag">React</span>
-                                <span class="portfolio__tag">D3.js</span>
-                                <span class="portfolio__tag">Firebase</span>
-                            </div>
-                            <div class="portfolio__buttons">
-                                <a href="#" class="portfolio__button">
-                                    <i class="fas fa-globe"></i> Demo
-                                </a>
-                                <a href="#" class="portfolio__button">
-                                    <i class="fab fa-github"></i> Código
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <section class="contact section" id="contact">
-            <div class="contact__container container">
-                <h2 class="section__title">Entre em Contato</h2>
-                <div class="contact__content">
-                    <div class="contact__info">
-                        <div class="contact__card">
-                            <i class="fas fa-envelope contact__card-icon"></i>
-                            <h3 class="contact__card-title">Email</h3>
-                            <span class="contact__card-data">matheus.ssantana13@gmail.com</span>
-                            <a href="mailto:matheus.ssantana13@gmail.com" class="contact__button">
-                                Enviar mensagem <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <div class="contact__card">
-                            <i class="fab fa-whatsapp contact__card-icon"></i>
-                            <h3 class="contact__card-title">WhatsApp</h3>
-                            <span class="contact__card-data">(11) 99999-9999</span>
-                            <a href="https://wa.me/5511999999999" target="_blank" class="contact__button">
-                                Enviar mensagem <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <div class="contact__card">
-                            <i class="fab fa-linkedin contact__card-icon"></i>
-                            <h3 class="contact__card-title">LinkedIn</h3>
-                            <span class="contact__card-data">Matheus Santana</span>
-                            <a href="#" target="_blank" class="contact__button">
-                                Ver perfil <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <form action="#" class="contact__form">
-                        <div class="contact__form-div">
-                            <label for="name" class="contact__form-tag">Nome</label>
-                            <input type="text" id="name" placeholder="Digite seu nome" class="contact__form-input">
-                        </div>
-                        <div class="contact__form-div">
-                            <label for="email" class="contact__form-tag">Email</label>
-                            <input type="email" id="email" placeholder="Digite seu email" class="contact__form-input">
-                        </div>
-                        <div class="contact__form-div">
-                            <label for="message" class="contact__form-tag">Mensagem</label>
-                            <textarea id="message" placeholder="Digite sua mensagem" class="contact__form-input contact__form-area"></textarea>
-                        </div>
-                        <button type="submit" class="button button--primary">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__social">
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-            <span class="footer__copy">
-                &copy; 2025 Matheus Santana. Todos os direitos reservados.
-            </span>
-        </div>
-    </footer>
-
-    <!-- Scroll to top -->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="fas fa-arrow-up scrollup__icon"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-</body>
-</html>
+### Versão 1.0.0
+- ✅ Design inicial
+- ✅ Estrutura HTML semântica
+- ✅ Estilização CSS completa
+- ✅ Funcionalidades JavaScript
+- ✅ Responsividade
+- ✅ Animações e transições
